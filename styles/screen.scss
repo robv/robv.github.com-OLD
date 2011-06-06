@@ -21,145 +21,146 @@ html, body {
     -webkit-font-smoothing: antialiased;
     font-family: Merriweather, Georgia, serif;
     color: #333;
-    #container {
-        margin: 0 auto;
-        padding: 0 10px;
-        width: 940px;
-        #sidebar {
-            margin-top: 25px;
-            width: 220px;
-            float: left;
-            h1 {
-                padding: 55px 0 20px;
-                background: url('/img/sprite.png') no-repeat 0 0;
-                font-size: 20px;
-                font-weight: bold;
-                font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
-            }
-            ul {
-                font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
-                &.site_navigation {
-                    li {
-                        padding: 0 0 5px;
-                        font-size: 14px;
-                        font-weight: bold;
-                        a {
-                            padding: 4px 8px;
-                            line-height: 25px;
-                            &:link, &:active, &:visited {
-                                color: #fff;
-                                background-color: #333;
-                                text-decoration: none;
-                                text-transform: uppercase;
-                                @include transition;
-                            }
-                            &:hover {
-                                background-color: #777;
-                            }
-                        }
-                    }
-                }
-                &.social_navigation {
-                    margin: 10px 0 5px;
-                    height: 35px;
-                    clear: right;
-                    li {
-                        a {
-                            width: 24px;
-                            height: 24px;
-                            overflow: hidden;
-                            text-indent: -9999px;
-                            display: block;
-                            float: left;
-                            margin-right: 5px;
+}
+
+#container {
+    margin: 0 auto;
+    padding: 0 10px;
+    width: 940px;
+    #sidebar {
+        margin-top: 25px;
+        width: 220px;
+        float: left;
+        h1 {
+            padding: 55px 0 20px;
+            background: url('/img/sprite.png') no-repeat 0 0;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+        }
+        ul {
+            font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+            &.site_navigation {
+                li {
+                    padding: 0 0 5px;
+                    font-size: 14px;
+                    font-weight: bold;
+                    a {
+                        padding: 4px 8px;
+                        line-height: 25px;
+                        &:link, &:active, &:visited {
+                            color: #fff;
+                            background-color: #333;
+                            text-decoration: none;
+                            text-transform: uppercase;
                             @include transition;
-                            &:hover {
-                                opacity: .6;
-                            }
                         }
-                        &.twitter {
-                            a {
-                                background: url('/img/sprite.png') no-repeat 0 -201px;
-                            }
-                        }
-                        &.facebook {
-                            a {
-                                background: url('/img/sprite.png') no-repeat 0 -589px;
-                            }
-                        }
-                        &.rdio {
-                            a {
-                                background: url('/img/sprite.png') no-repeat 0 -395px;
-                            }
-                        }
-                        &.github {
-                            a {
-                                background: url('/img/sprite.png') no-repeat 0 -976px;
-                            }
-                        }
-                        &.dribbble {
-                            a {
-                                background: url('/img/sprite.png') no-repeat 0 -782px;
-                            }
+                        &:hover {
+                            background-color: #777;
                         }
                     }
                 }
             }
-            p {
-                clear: left;
-                line-height: 20px;
+            &.social_navigation {
+                margin: 10px 0 5px;
+                height: 35px;
+                clear: right;
+                li {
+                    a {
+                        width: 24px;
+                        height: 24px;
+                        overflow: hidden;
+                        text-indent: -9999px;
+                        display: block;
+                        float: left;
+                        margin-right: 5px;
+                        @include transition;
+                        &:hover {
+                            opacity: .6;
+                        }
+                    }
+                    &.twitter {
+                        a {
+                            background: url('/img/sprite.png') no-repeat 0 -201px;
+                        }
+                    }
+                    &.facebook {
+                        a {
+                            background: url('/img/sprite.png') no-repeat 0 -589px;
+                        }
+                    }
+                    &.rdio {
+                        a {
+                            background: url('/img/sprite.png') no-repeat 0 -395px;
+                        }
+                    }
+                    &.github {
+                        a {
+                            background: url('/img/sprite.png') no-repeat 0 -976px;
+                        }
+                    }
+                    &.dribbble {
+                        a {
+                            background: url('/img/sprite.png') no-repeat 0 -782px;
+                        }
+                    }
+                }
             }
         }
-        #content {
-            margin-top: 25px;
-            width: 580px;
-            float: right;
+        p {
+            clear: left;
+            line-height: 20px;
+        }
+    }
+    #content {
+        margin-top: 25px;
+        width: 580px;
+        float: right;
+        a {
+            &:link, &:active, &:visited {
+                color: #777;
+                text-decoration: none;
+                border-bottom: 1px dotted #ddd;
+            }
+            &:hover {
+                color: #333;
+                border-bottom: 1px solid #ddd;
+            }
+        }
+        h2 {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
             a {
                 &:link, &:active, &:visited {
-                    color: #777;
-                    text-decoration: none;
-                    border-bottom: 1px dotted #ddd;
+                    color: #333;
                 }
                 &:hover {
-                    color: #333;
-                    border-bottom: 1px solid #ddd;
+                    color: #777;
                 }
             }
-            h2 {
-                font-size: 30px;
+        }
+        p {
+            padding: 0 0 15px;
+            line-height: 20px;
+        }
+        .article {
+            margin-bottom: 40px;
+            .date {
+                position: absolute;
+                margin: 0 0 0 -110px;
+                padding: 10px 5px 10px 10px;
+                width: 55px;
+                background-color: #333;
+                color: #fff;
+                text-align: right;
+                text-transform: uppercase;
+                font-size: 22px;
                 font-weight: bold;
-                margin-bottom: 15px;
                 font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
-                a {
-                    &:link, &:active, &:visited {
-                        color: #333;
-                    }
-                    &:hover {
-                        color: #777;
-                    }
-                }
-            }
-            p {
-                padding: 0 0 15px;
-                line-height: 20px;
-            }
-            .article {
-                margin-bottom: 40px;
-                .date {
-                    position: absolute;
-                    margin: 0 0 0 -110px;
-                    padding: 10px 5px 10px 10px;
-                    width: 55px;
-                    background-color: #333;
-                    color: #fff;
-                    text-align: right;
-                    text-transform: uppercase;
-                    font-size: 22px;
-                    font-weight: bold;
-                    font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
-                    span {
-                        display: block;
-                    }
+                span {
+                    display: block;
                 }
             }
         }
