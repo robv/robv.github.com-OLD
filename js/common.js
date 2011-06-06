@@ -14,6 +14,11 @@ var Site;
 			
 			// On Dom Ready
 			$(function() {
+        
+			});
+			
+			// On Window Load
+			$(window).load(function() {
 				
 				WebFontConfig = {
           google: { families: [ 'Molengo', 'Merriweather:light,regular,bold,900' ] }
@@ -28,7 +33,7 @@ var Site;
           var s = document.getElementsByTagName('script')[0];
           s.parentNode.insertBefore(wf, s);
         })();
-        
+
 			});
 
 		}

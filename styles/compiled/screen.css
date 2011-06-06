@@ -55,23 +55,31 @@ html, body {
         font-family: 'Helvetica Neue', 'Helvetica', sans-serif; }
       html #container #sidebar ul, body #container #sidebar ul {
         font-family: 'Helvetica Neue', 'Helvetica', sans-serif; }
-        html #container #sidebar ul.site_navigation, body #container #sidebar ul.site_navigation {
-          margin: 0 0 5px 0; }
-          html #container #sidebar ul.site_navigation li, body #container #sidebar ul.site_navigation li {
-            padding: 0 0 5px;
-            font-size: 14px;
-            font-weight: bold; }
-            html #container #sidebar ul.site_navigation li a, body #container #sidebar ul.site_navigation li a {
-              padding: 4px 8px;
-              line-height: 25px; }
-              html #container #sidebar ul.site_navigation li a:link, html #container #sidebar ul.site_navigation li a:active, html #container #sidebar ul.site_navigation li a:visited, body #container #sidebar ul.site_navigation li a:link, body #container #sidebar ul.site_navigation li a:active, body #container #sidebar ul.site_navigation li a:visited {
-                color: #fff;
-                background-color: #333;
-                text-decoration: none;
-                text-transform: uppercase; }
-              html #container #sidebar ul.site_navigation li a:hover, body #container #sidebar ul.site_navigation li a:hover {
-                background-color: #777; }
+        html #container #sidebar ul.site_navigation li, body #container #sidebar ul.site_navigation li {
+          padding: 0 0 5px;
+          font-size: 14px;
+          font-weight: bold; }
+          html #container #sidebar ul.site_navigation li a, body #container #sidebar ul.site_navigation li a {
+            padding: 4px 8px;
+            line-height: 25px; }
+            html #container #sidebar ul.site_navigation li a:link, html #container #sidebar ul.site_navigation li a:active, html #container #sidebar ul.site_navigation li a:visited, body #container #sidebar ul.site_navigation li a:link, body #container #sidebar ul.site_navigation li a:active, body #container #sidebar ul.site_navigation li a:visited {
+              color: #fff;
+              background-color: #333;
+              text-decoration: none;
+              text-transform: uppercase;
+              -webkit-transition-property: all;
+              -webkit-transition-duration: 350ms;
+              -webkit-transition-timing-function: linear;
+              -moz-transition-property: all;
+              -moz-transition-duration: 350ms;
+              -moz-transition-timing-function: linear;
+              transition-property: all;
+              transition-duration: 350ms;
+              transition-timing-function: linear; }
+            html #container #sidebar ul.site_navigation li a:hover, body #container #sidebar ul.site_navigation li a:hover {
+              background-color: #777; }
         html #container #sidebar ul.social_navigation, body #container #sidebar ul.social_navigation {
+          margin: 10px 0 5px;
           height: 35px;
           clear: right; }
           html #container #sidebar ul.social_navigation li a, body #container #sidebar ul.social_navigation li a {
@@ -81,7 +89,16 @@ html, body {
             text-indent: -9999px;
             display: block;
             float: left;
-            margin-right: 5px; }
+            margin-right: 5px;
+            -webkit-transition-property: all;
+            -webkit-transition-duration: 350ms;
+            -webkit-transition-timing-function: linear;
+            -moz-transition-property: all;
+            -moz-transition-duration: 350ms;
+            -moz-transition-timing-function: linear;
+            transition-property: all;
+            transition-duration: 350ms;
+            transition-timing-function: linear; }
             html #container #sidebar ul.social_navigation li a:hover, body #container #sidebar ul.social_navigation li a:hover {
               opacity: .6; }
           html #container #sidebar ul.social_navigation li.twitter a, body #container #sidebar ul.social_navigation li.twitter a {
@@ -96,19 +113,32 @@ html, body {
             background: url("/img/sprite.png") no-repeat 0 -782px; }
       html #container #sidebar p, body #container #sidebar p {
         clear: left;
-        line-height: 16px; }
+        line-height: 20px; }
     html #container #content, body #container #content {
       margin-top: 25px;
       width: 580px;
       float: right; }
+      html #container #content a:link, html #container #content a:active, html #container #content a:visited, body #container #content a:link, body #container #content a:active, body #container #content a:visited {
+        color: #777;
+        text-decoration: none;
+        border-bottom: 1px dotted #ddd; }
+      html #container #content a:hover, body #container #content a:hover {
+        color: #333;
+        border-bottom: 1px solid #ddd; }
+      html #container #content h2, body #container #content h2 {
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        font-family: 'Helvetica Neue', 'Helvetica', sans-serif; }
+        html #container #content h2 a:link, html #container #content h2 a:active, html #container #content h2 a:visited, body #container #content h2 a:link, body #container #content h2 a:active, body #container #content h2 a:visited {
+          color: #333; }
+        html #container #content h2 a:hover, body #container #content h2 a:hover {
+          color: #777; }
+      html #container #content p, body #container #content p {
+        padding: 0 0 15px;
+        line-height: 20px; }
       html #container #content .article, body #container #content .article {
         margin-bottom: 40px; }
-        html #container #content .article a:link, html #container #content .article a:active, html #container #content .article a:visited, body #container #content .article a:link, body #container #content .article a:active, body #container #content .article a:visited {
-          color: #333;
-          text-decoration: none;
-          border-bottom: 1px dotted #ddd; }
-        html #container #content .article a:hover, body #container #content .article a:hover {
-          border-bottom: 1px solid #ddd; }
         html #container #content .article .date, body #container #content .article .date {
           position: absolute;
           margin: 0 0 0 -110px;
@@ -123,11 +153,3 @@ html, body {
           font-family: 'Helvetica Neue', 'Helvetica', sans-serif; }
           html #container #content .article .date span, body #container #content .article .date span {
             display: block; }
-        html #container #content .article h2, body #container #content .article h2 {
-          font-size: 30px;
-          font-weight: bold;
-          margin-bottom: 15px;
-          font-family: 'Helvetica Neue', 'Helvetica', sans-serif; }
-        html #container #content .article p, body #container #content .article p {
-          padding: 0 0 15px;
-          line-height: 16px; }

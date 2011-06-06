@@ -1,5 +1,17 @@
 @import "reset";
 
+@mixin transition($time:350ms,$property:all,$type:linear) {
+    -webkit-transition-property: $property;
+    -webkit-transition-duration: $time;
+    -webkit-transition-timing-function: $type;
+    -moz-transition-property: $property;
+    -moz-transition-duration: $time;
+    -moz-transition-timing-function: $type;
+    transition-property: $property;
+    transition-duration: $time;
+    transition-timing-function: $type;
+}
+
 html, body {
     width: 100%;
     min-width: 960px;
@@ -27,7 +39,6 @@ html, body {
             ul {
                 font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
                 &.site_navigation {
-                    margin: 0 0 5px 0;
                     li {
                         padding: 0 0 5px;
                         font-size: 14px;
@@ -40,6 +51,7 @@ html, body {
                                 background-color: #333;
                                 text-decoration: none;
                                 text-transform: uppercase;
+                                @include transition;
                             }
                             &:hover {
                                 background-color: #777;
@@ -48,6 +60,7 @@ html, body {
                     }
                 }
                 &.social_navigation {
+                    margin: 10px 0 5px;
                     height: 35px;
                     clear: right;
                     li {
@@ -59,6 +72,7 @@ html, body {
                             display: block;
                             float: left;
                             margin-right: 5px;
+                            @include transition;
                             &:hover {
                                 opacity: .6;
                             }
@@ -93,25 +107,44 @@ html, body {
             }
             p {
                 clear: left;
-                line-height: 16px;
+                line-height: 20px;
             }
         }
         #content {
             margin-top: 25px;
             width: 580px;
             float: right;
-            .article {
-                margin-bottom: 40px;
+            a {
+                &:link, &:active, &:visited {
+                    color: #777;
+                    text-decoration: none;
+                    border-bottom: 1px dotted #ddd;
+                }
+                &:hover {
+                    color: #333;
+                    border-bottom: 1px solid #ddd;
+                }
+            }
+            h2 {
+                font-size: 30px;
+                font-weight: bold;
+                margin-bottom: 15px;
+                font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
                 a {
                     &:link, &:active, &:visited {
                         color: #333;
-                        text-decoration: none;
-                        border-bottom: 1px dotted #ddd;
                     }
                     &:hover {
-                        border-bottom: 1px solid #ddd;
+                        color: #777;
                     }
                 }
+            }
+            p {
+                padding: 0 0 15px;
+                line-height: 20px;
+            }
+            .article {
+                margin-bottom: 40px;
                 .date {
                     position: absolute;
                     margin: 0 0 0 -110px;
@@ -127,16 +160,6 @@ html, body {
                     span {
                         display: block;
                     }
-                }
-                h2 {
-                    font-size: 30px;
-                    font-weight: bold;
-                    margin-bottom: 15px;
-                    font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
-                }
-                p {
-                    padding: 0 0 15px;
-                    line-height: 16px;
                 }
             }
         }
